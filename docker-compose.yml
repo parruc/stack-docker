@@ -38,6 +38,7 @@ services:
     volumes:
       - ./config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
       - ./inputs:/var/inputs
+    ports: ['9090:9090']
     networks: ['stack']
     depends_on: ['elasticsearch', 'setup_logstash']
 
